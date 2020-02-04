@@ -1,0 +1,43 @@
+
+<div class="container">
+  <button class="btn btn-success mt-2"
+  (click)="addEmployee()"
+  >Add new Employee</button>
+
+  <button class="btn btn-dark mt-2 float-right" 
+  (click)="ToggleTable()">{{buttonStatus}}</button>
+
+  <table 
+  *ngIf="hideOrShowEmp"
+  class="table table-bordered table-hover bg-dark text-white mt-2">
+    <tr>
+      <th>name</th>
+      <th>age</th>
+      <th>company</th>
+      <th>salary</th>
+      <th>designation</th>
+      <th>gender</th>
+      <th>education</th>
+      <th>location</th>
+      <th>doj</th>
+      <!-- <th>skills</th> -->
+      <th>Remove</th>
+    </tr>
+    <tr *ngFor="let emp of employeeInfomation">
+     
+     <td>{{emp.name | uppercase}}</td>
+     <td>{{emp.age}}</td>
+     <td>{{emp.company}}</td>
+     <td>{{emp.salary | currency:'INR':true}}</td>
+     <td>{{emp.designation}}</td>
+     <td>{{emp.gender}}</td>
+     <td>{{emp.education}}</td>
+     <td>{{emp.location}}</td>
+     <td>{{emp.doj | date:'fullDate' }}}</td>
+     <!-- <td>{{emp.skills}}</td> -->
+     <td><button class="btn btn-danger"
+      (click)="removeEmp(emp)"
+      >Remove</button></td>
+    </tr>
+  </table>
+</div>

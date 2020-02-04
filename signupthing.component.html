@@ -1,0 +1,56 @@
+<!-- <div class="container mt-4">
+  <div class="form-group">
+    <label>
+      Email:
+    </label>
+    <input type="text" [formControl]="email" />
+  </div>
+  <div class="form-group">
+    <button (click)="updateEmail()" class="btn btn-dark">Update Email</button>
+  </div>
+  <p>Value: {{ email.value }}</p>
+</div> -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-3" style="border: 2px solid green;">
+      <h3 class="text-center">Validation Form</h3>
+      <div class="form-group">
+        <label for="name">Name.</label
+        ><input
+          type="text"
+          class="form-control"
+          id="name"
+          [formControl]="name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="phone">Mobile No.</label
+        ><input
+          type="tel"
+          class="form-control"
+          id="phone"
+          [formControl]="phone"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email.</label
+        ><input
+          type="email"
+          class="form-control"
+          id="email"
+          [formControl]="email"
+        />
+      </div>
+      <div class="form-group">
+        <button (click)="updateEmail()" class="btn btn-dark">
+          Update Email
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <p>Value: {{ name.value }}</p>
+  <p>Value: {{ email.value }}</p>
+  <p>Value: {{ phone.value }}</p>
+</div>
